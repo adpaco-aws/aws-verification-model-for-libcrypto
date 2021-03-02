@@ -12,7 +12,7 @@
  */
 void EVP_MD_CTX_free(EVP_MD_CTX *ctx) {
     if (ctx) {
-        assert(ctx->pkey == NULL);
+        assert(ctx->pctx->pkey == NULL);
         free(ctx);
     }
 }

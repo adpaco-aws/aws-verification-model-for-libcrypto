@@ -1088,3 +1088,8 @@ int EVP_MD_CTX_copy_ex(EVP_MD_CTX *out, const EVP_MD_CTX *in) {
     if (in == NULL) return 0;
     return (int)nondet_bool();
 }
+
+/* Helper function for CBMC proofs: allocates EVP_MD nondeterministically. */
+EVP_MD *evp_md_nondet_alloc() {
+    return malloc(sizeof(EVP_MD));
+}

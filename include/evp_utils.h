@@ -23,6 +23,8 @@ void evp_md_ctx_set0_evp_pkey(EVP_MD_CTX *ctx, EVP_PKEY *pkey);
 
 void evp_md_ctx_shallow_free(EVP_MD_CTX *ctx);
 
+EVP_PKEY *evp_md_nondet_alloc();
+
 int evp_pkey_get_reference_count(EVP_PKEY *pkey);
 
 bool evp_pkey_is_valid(EVP_PKEY *pkey);
